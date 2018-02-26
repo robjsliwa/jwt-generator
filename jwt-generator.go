@@ -5,7 +5,6 @@ import (
 	"crypto/rsa"
 	"crypto/x509"
 	"encoding/pem"
-	"errors"
 	"flag"
 	"fmt"
 	"io/ioutil"
@@ -74,7 +73,7 @@ func generateJWT(conf *Config, privateKey string) (string, error) {
 	for _, claim := range conf.Claims {
 		claimKV := strings.Split(claim, ":")
 		if len(claimKV) != 2 {
-			return "", errors.New(fmt.Sprintf("Invalid claim: %v\n", claim))
+			return "", fmt.Errorf("invalid claim: %v", claim)
 		}
 		claimName := claimKV[0]
 		claimValue := claimKV[1]
