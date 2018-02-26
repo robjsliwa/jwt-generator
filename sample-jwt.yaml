@@ -1,0 +1,9 @@
+expires: 129600
+
+claims:
+  - iss:jwt-generator
+  - type:test
+
+keys:
+  public: ./jwt-public
+  private: "./jwt-private"
