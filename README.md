@@ -15,3 +15,13 @@ keys:
   public: ./jwt-public
   private: "./jwt-private"
 ```
+
+# How to use
+./jwt-generator --configuration sample-jwt.yaml
+
+This produces following output:
+
+```
+No keys found, will generate new keys
+Token: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1Mjc0Mzk2NDYsImlhdCI6MTUxOTY2MzY0NiwiaXNzIjoiand0LWdlbmVyYXRvciIsInR5cGUiOiJ0ZXN0In0.JVplOSdKeeyypPPAxYDLmpUEVTjunwuVPRonlqdlcHYWiS1ssw7xRlUwwvsB1sRAnf-aXBeBoOvPosswoHDSm7AlrWjMAIONw0_PgI1TPluk_TEr5_syG1uVMNDL7QChKAVO0tpW1eJoa1KBhb0WU4we6gw_FpJBpdn2piXdDTJf35U_AWqSbmXzcy1eZy0-VAcROnER4QS7ujjCQZV5LjQD1p0zRbMzGoANR2RPU6C2VFvWjABAIXhcwuaxZX65YNOtABgcuKXjMZZOGgzcHiNbTXNyfBH4FAEdqfKnyulr_DkJKVjEr8c94RHL7kBEkyycSh62mvhDJDts8n-xmw
+```
