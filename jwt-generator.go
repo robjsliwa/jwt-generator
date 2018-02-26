@@ -71,7 +71,7 @@ func generateJWT(conf *Config, privateKey string) (string, error) {
 	claims["iat"] = time.Now().Unix()
 
 	for _, claim := range conf.Claims {
-		claimKV := strings.Split(claim, ":")
+		claimKV := strings.SplitN(claim, ":", 2)
 		if len(claimKV) != 2 {
 			return "", fmt.Errorf("invalid claim: %v", claim)
 		}
