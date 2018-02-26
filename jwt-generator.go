@@ -77,7 +77,6 @@ func generateJWT(conf *Config, privateKey string) (string, error) {
 		}
 		claimName := claimKV[0]
 		claimValue := claimKV[1]
-		fmt.Printf("Claim %v:%v\n", claimName, claimValue)
 		claims[claimName] = claimValue
 	}
 
